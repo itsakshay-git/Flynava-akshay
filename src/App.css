@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+.mainpage{
+  background: rgb(37, 36, 36);
+  min-height: 100vh;
+  color: white;
+}
+
+.notloggedin{
+  height: 70px;
+  background-color: rgb(68, 67, 67);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

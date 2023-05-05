@@ -1,0 +1,32 @@
+.detailbox{
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.moviecard{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: gray;
+}
+.moviecard h4{
+    color: rgb(31, 132, 190);
+}
+
+.moviecard img{
+    height: 300px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 0.5rem;
+}
+
+.imdb{
+    color: yellow;
+    margin-right: 20px;
+}
+
+.highlight{
+    color: rgb(31, 132, 190);
+}

@@ -1,0 +1,104 @@
+.title {
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: gray;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.inputs_container {
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .inputs_container input {
+    width: 95%;
+    margin: 0.8rem 0;
+    padding: 1rem;
+    /* border-radius: 25px; */
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: rgb(236, 234, 234);
+    outline: 0;
+    border: 0;
+  }
+  
+  .login_button {
+    display: block;
+    margin: 1.9rem auto 1rem auto;
+    width: 55%;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    outline: 0;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    background-color: rgb(236, 234, 234);
+    color: rgb(77, 76, 76);
+    font-weight: bold;
+    border: 2px solid transparent;
+  }
+  
+  .login_button:hover {
+    background-color: #00c9fc;
+    color: white;
+  }
+  
+  .link_container {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+  }
+  
+  .small {
+    color: #00c9fc;
+    text-align: center;
+    font-size: 1rem;
+    text-decoration: none;
+    margin-bottom: 5rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .error_msg {
+    color: red;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .card p{
+    color: black;
+  }
+
+  .check{
+    color: black;
+  }
+  
+  @media only screen and (max-width: 620px) {
+    .inputs_container input {
+      width: 90%;
+    }
+  
+    .login_button {
+      width: 100%;
+    }
+  
+    .error_msg {
+      padding-left: 0.2rem;
+    }
+  }
+  
+  @media only screen and (max-height: 670px) {
+    .subtitle {
+      margin-bottom: 2rem;
+    }
+  
+    .small {
+      margin-bottom: 3rem;
+    }
+  }

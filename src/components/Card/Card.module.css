@@ -1,0 +1,25 @@
+.cardwindow{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+    height: 450px;
+    width: 600px;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 3rem;
+    margin: 1rem;
+  }
+  
+  @media only screen and (max-width: 620px) {
+    .card {
+      width: 90vw;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      margin: 1rem;
+    }
+  }
+  

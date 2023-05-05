@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import fetchData from "./service";
+import Login from "./components/Login/Login";
+import Nav from "./components/Nav/Nav";
+import { Outlet } from "react-router-dom";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [data, setdata] = useState([])
+
+  useEffect(() => {
+    let test = async () =>{
+      let movieData = await fetchData();
+      console.log(movieData)
+      setdata(movieData)
+      console.log(data)
+    }
+    test()
+     // eslint-disable-next-line
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="mainpage">
+      {isLoggedIn ? <Nav setIsLoggedIn={setIsLoggedIn} /> : (<div className='notloggedin'></div>)}
+      {!isLoggedIn ? <Login setIsLoggedIn={setIsLoggedIn}/>: null}
+      <Outlet  context={{isLoggedIn, setIsLoggedIn, data}}/>
     </div>
   );
 }
